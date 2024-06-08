@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Player class for two-players
 class Player
   attr_accessor :name
   attr_reader :player_number, :marker
