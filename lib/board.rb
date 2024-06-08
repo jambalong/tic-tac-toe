@@ -1,4 +1,8 @@
 class Board
+  include Enumerable
+
+  attr_reader :empty_marker
+
   WINNING_LINES = [
       [1, 2, 3], [4, 5, 6], [7, 8, 9], # rows
       [1, 4, 7], [2, 5, 8], [3, 6, 9], # columns
@@ -10,6 +14,18 @@ class Board
     @empty_marker = ' '
 
     (1..9).each { |n| @board[n] = @empty_marker }
+  end
+
+  def [](key)
+    @board[key]
+  end
+
+  def []=(key, value)
+    @board[key] = value
+  end
+
+  def each(&block)
+    @board.each(&block)
   end
 
   def display
@@ -29,5 +45,13 @@ class Board
          |     |
     
     EOS
+  end
+
+  def keys
+    @board.keys
+  end
+
+  def winning_lines
+    WINNING_LINES
   end
 end
