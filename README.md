@@ -1,4 +1,4 @@
-# Tic-Tac-Toe
+# Tic-Tac-Toe Game
 
 This project is from The Odin Project: [Tic Tac Toe](https://www.theodinproject.com/lessons/ruby-tic-tac-toe), where I build a command-line implementation of the game.
 
